@@ -1,0 +1,19 @@
+Create Virtual Environement for Django:
+$ :  sudo apt install python3.8-venv
+$ :  python3 -m venv .  (or python3 -m venv envdir – to keep env in directory)
+$ :  source bin/activate  (activate the v env and now run pip freeze install any requirements in here 					with the env enabled)
+$ : deactivate ( to deactivate the environment)
+$ : pip install fastapi[all]
+
+
+
+
+
+================ubuntu shell commands =======
+rename directory   = mv old_name new_name
+compy a directory  = 
+cp -r media/user/Storage/2021/kg home/user/Desktop/dev/2021/kg
+
+==================Project Notes=================
+create vendor app
+model -->   contact, company, logo, address, postal areas 
