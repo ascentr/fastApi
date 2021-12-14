@@ -11,6 +11,9 @@ class Settings(BaseSettings):
     algorithm : str
     access_token_expires_minutes: int
 
+    database_url = f'postgresql://{database_username}:{database_password}@{database_hostname}:{database_port}/{database_name}'
+
+
     class Config:
         env_file = ".env"
 

@@ -13,9 +13,9 @@ from .config import settings
 
 #SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:amjad@localhost/fastapi'
 
-SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
+#SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
 
-#SQLALCHEMY_DATABASE_URL = f'{settings.database_URL}, sslMode="require"'
+SQLALCHEMY_DATABASE_URL = f'{settings.database_url}, sslMode="require"'
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
