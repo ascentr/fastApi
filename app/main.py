@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.responses import HTMLResponse
 from . import models 
 from .database import engine 
 from .routers import posts, users, auth,  vote
@@ -26,6 +27,10 @@ app.include_router(auth.router)
 app.include_router(vote.router)
 
 #home page
-@app.get("/")
+@app.get("/" , response_class=HTMLResponse)
 def root():
-    return ("Hello World") 
+    return """
+        <body>
+            <h1>-- Hello World -- اسلام علیکم -- </h1>
+        </body>
+        """
